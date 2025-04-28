@@ -1,0 +1,43 @@
+﻿@page
+@model EasyBeautyASP.Pages.NewProductsModel
+@{
+	ViewData["Title"] = "New Product Admin Page";
+    Layout = "_Layout";
+}
+
+
+<div class="form_content">
+              <form method="post" class="form" >
+                <div class="forms_text pb-3">                  
+                </div>
+                <div class="input-control p-2">
+                  <label><span class="Labels">Product Id</span></label>
+                  <input type="text" class="inputs" asp-for="@Model.Products.ProductId">                  
+                </div>
+                <div class="input-control p-2">
+                  <label><span class="Labels">Product Name</span></label>
+                  <input type="text" class="inputs" asp-for="@Model.Products.ProductName">                  
+                </div>
+                <div class="input-control p-2">
+                  <label><span class="Labels">Product First Description</span></label>
+                  <input type="text" class="inputs" asp-for="@Model.Products.ProductFirstDescription">                  
+                </div>
+                <div class="input-control p-2">
+                  <label><span class="Labels">Product Second Description</span></label>
+                  <input type="text" class="inputs" asp-for="@Model.Products.ProductSecondDescription">                  
+                </div>
+                <div class="input-control p-2">
+                  <label><span class="Labels">Product Price</span></label>
+                  <input type="text" class="inputs" asp-for="@Model.Products.ProductPrice">                  
+                </div>
+                <div class="input-control p-2">
+                  <label><span class="Labels">Product Add New Image</span></label>
+                  <input type="file">                  
+                </div>
+                <div class="input-control p-2">
+                  <label><span class="Labels">Product Image, just type in Name of the Image with extension</span></label>
+                  <input type="text" class="inputs" asp-for="@Model.Products.ProductImage">                  
+                </div>
+                <button type="submit">Save</button>
+              </form>
+</div>

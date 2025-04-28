@@ -1,0 +1,30 @@
+﻿@page
+@model EasyBeautyASP.Pages.ProductPageModel
+@{
+	ViewData["Title"] = "Products";
+    Layout = "_Layout";
+}
+
+<div class="col-md-5 card-style my-2" style="margin: 0px auto;">
+        <div class="row">
+          <div class="col-md-6">
+            <div style="overflow: hidden;" class="card">
+              <img src="../assets/media/images/@Model.Products.ProductImage" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>           
+          </div>
+          <div class="col-md-6 content">
+            <!-- Reference: https://olay.co.uk/skin-care-products/face-cleanser/anti-wrinkle-face-wash-cleanser -->
+            <h5>@Model.Products.ProductName</h5>
+            <h2>@Model.Products.ProductFirstDescription</h2>
+            <p class="pt-3 card-text">@Model.Products.ProductSecondDescription</p>
+            <h4>$@Model.Products.ProductPrice</h4>
+            <form method="post" asp-page-handler="AddToCart">
+                <input type="hidden" name="userId" value="@User.Identity.Name" />
+                <input type="hidden" name="productId" value="@Model.Products.ProductId" />
+                <input type="number" name="quantity" value="1" />
+                <button type="submit" class="style-btn content">Add to Cart</button>
+            </form>
+          </div>
+        </div>
+      </div>

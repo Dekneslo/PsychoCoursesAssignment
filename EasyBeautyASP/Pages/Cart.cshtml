@@ -1,0 +1,55 @@
+﻿@page
+@model EasyBeautyASP.Pages.CartModel
+@{
+}
+
+
+
+<table style="margin: 100px;">
+    <thead>
+        <tr>
+            <th style="padding-right: 30px;">Product</th>
+            <th style="padding-right: 30px;">Price</th>
+            <th style="padding-right: 30px;">Quantity</th>
+            <th style="padding-right: 30px;">Total</th>
+            <th style="padding-right: 30px;">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.CartItems == null)
+        {
+            <p>CartItems is null</p>
+        }
+        else if (Model.CartItems.Count == 0)
+        {
+            <p>Cart is empty</p>
+        }
+        else
+        {
+
+        @foreach (var item in Model.CartItems)
+        {
+            <tr>
+                <td style="padding-right: 30px;">@item.Product.ProductName</td>
+                <td style="padding-right: 30px;">@item.Product.ProductPrice</td>
+                <td style="padding-right: 30px;">@item.Quantity</td>
+                <td style="padding-right: 30px;">@(item.Product.ProductPrice * item.Quantity)</td>
+                <td style="padding-right: 30px;">
+                    <form asp-page-handler="UpdateCart" method="post">
+                        <input type="hidden" name="cartItemId" value="@item.Id" />
+                        <input type="number" class="form-control" name="quantity" value="@item.Quantity" />
+                        <button type="submit">Update</button>
+                    </form>     
+                </td>
+                <td style="padding-right: 30px;">
+                    <form asp-page-handler="RemoveFromCart" method="post">
+                        <input type="hidden" name="cartItemId" value="@item.Id" />
+                        <button type="submit">Remove</button>
+                    </form>
+                </td>               
+            </tr>
+        }
+        }
+         <td style="padding-right: 30px;">The Total Price: $@Model.ShoppingCartTotal</td>
+    </tbody>
+</table>

@@ -1,0 +1,47 @@
+﻿@page
+@model EasyBeautyASP.Pages.ShopModel
+@{
+}
+
+<div class="container-fluid mt-5 mb-5">
+  <div class="row pb-4">
+    <div class="col-md-12 text-center">
+      <h1>
+        Наши курсы
+      </h1>
+    </div>
+  </div>
+  <form method="get" class="d-flex justify-content-center mt-4">
+    <input type="text" asp-for="SearchTerm" class="form-control search-input me-2" placeholder="Skin cleaner">
+    <button type="submit" class="btn btn-primary search-button">Search</button>
+  </form>
+
+  <div class="row d-flex justify-content-evenly p-3">
+    @foreach (var product in Model.Products) {
+      <div class="col-md-5 card-style my-2">
+        <div class="row">
+          <div class="col-md-6">
+            <div style="overflow: hidden;" class="card">
+              <img src="../assets/media/images/@product.ProductImage" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>           
+          </div>
+          <div class="col-md-6 content">
+            <!-- Reference: https://olay.co.uk/skin-care-products/face-cleanser/anti-wrinkle-face-wash-cleanser -->
+            <a asp-page="ProductPage" asp-route-id="@product.ProductId"><h2>@product.ProductName</h2></a>
+            <h5>@product.ProductFirstDescription</h5>
+            <h4>$@product.ProductPrice</h4>
+            <form method="post" asp-page-handler="AddToCart">
+                <input type="hidden" name="userId" value="@User.Identity.Name" />
+                <input type="hidden" name="productId" value="@product.ProductId" />
+                <div class="d-flex align-items-center gap-2 mt-2">
+                    <input type="number" name="quantity" value="1" class="form-control quantity-input" min="1" />
+                    <button type="submit" class="btn btn-primary add-to-cart-button">Add to Cart</button>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    }
+  </div>
+</div>

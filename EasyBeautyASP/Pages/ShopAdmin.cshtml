@@ -1,0 +1,60 @@
+﻿@page
+@model EasyBeautyASP.Pages.ShopAdminModel
+@{
+	ViewData["Title"] = "Product Admin Page";
+    Layout = "_Layout";
+}
+
+<a asp-page="NewProducts">Add New Product to the Website here!</a>
+
+<h1>List of Products</h1>
+
+<table style="margin-top: 50px;">
+    <thead>
+        <tr>
+            <th style="padding-right: 20px">ID                      |</th>
+            <th style="padding-right: 20px">Name                    |</th>
+            <th style="padding-right: 20px">Description             |</th>
+            <th style="padding-right: 20px">Price                   |</th>
+            <th style="padding-right: 20px">Actions:                |</th>
+            <th style="padding-right: 20px">Actions:                |</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model.Products)
+        {
+            <tr>
+                <td style="padding-right: 20px">@product.ProductId</td>
+                <td style="padding-right: 20px">@product.ProductName</td>
+                <td style="padding-right: 20px">@product.ProductFirstDescription</td>
+                <td style="padding-right: 20px">@product.ProductPrice</td>
+                <td style="padding-right: 20px"><a asp-page="/EditProducts" asp-route-id="@product.ProductId">Update</a></td>
+                <td style="padding-right: 20px"><a asp-page="/DeleteProducts" asp-route-id="@product.ProductId">Delete</a></td>
+                
+            </tr>
+        }
+    </tbody>
+</table>
+
+
+<table style="margin: 50px;">
+    <thead>
+        <tr>
+            <th style="padding-right: 20px">ID</th>
+            <th style="padding-right: 20px">Name</th>
+            <th style="padding-right: 20px">Email</th>
+            <th style="padding-right: 20px">Actions:                |</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var customer in Model.Users)
+        {
+            <tr>
+                <td style="padding-right: 20px">@customer.Id</td>
+                <td style="padding-right: 20px">@customer.FirstName</td>
+                <td style="padding-right: 20px">@customer.Email</td>
+                <td style="padding-right: 20px"><a asp-page="/DeleteUsers" asp-route-id="@customer.Id">Delete</a></td>
+            </tr>
+        }
+    </tbody>
+</table>

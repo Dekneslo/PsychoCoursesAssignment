@@ -1,0 +1,58 @@
+﻿@page
+@model LoginModel
+@{
+    ViewData["Title"] = "Log in";
+    Layout = "_Layout";
+
+}
+
+<div class="container main_container register-page-container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            <div class="container-si signup_forms">
+                <div class="row w-100 align-items-center">
+
+                    <!-- Левая колонка с изображением -->
+                    <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center">
+                        <img src="~/assets/media/images/psychowide (1).jpg" class="img-fluid rounded" alt="Вход" style="max-height: 500px;">
+                    </div>
+
+                    <!-- Правая колонка с формой -->
+                    <div class="col-md-6" style="background-color: transparent;">
+                        <form id="account" method="post" class="form">
+                            <h2 class="h1 mb-4 text-center" style="color: #1E758F; font-weight: bold;">Войти в аккаунт</h2>
+
+                            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                            <!-- Email -->
+                            <div class="mb-3 w-100 input-control">
+                                <label asp-for="Input.Email" class="register-label"></label>
+                                <input asp-for="Input.Email" class="register-input" autocomplete="username" aria-required="true" />
+                                <span asp-validation-for="Input.Email" class="error text-danger"></span>
+                            </div>
+
+                            <!-- Password -->
+                            <div class="mb-3 w-100 input-control">
+                                <label class="register-label">Пароль</label>
+                                <input asp-for="Input.Password" type="password" class="register-input" autocomplete="current-password" aria-required="true" />
+                                <span asp-validation-for="Input.Password" class="error text-danger"></span>
+                            </div>
+
+
+                            <!-- Submit button -->
+                            <button id="login-submit" type="submit" class="register-button">Войти</button>
+
+                            <!-- Дополнительные ссылки -->
+                            <div class="mt-4 text-center">
+                                <p><a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="login-text">Создать новый аккаунт</a></p>
+                            </div>
+                        </form>
+                    </div> <!-- Конец формы -->
+                </div> <!-- Конец строки -->
+            </div> <!-- Конец контейнера формы -->
+        </div> <!-- Конец col-md-10 -->
+    </div> <!-- Конец строки justify-content-center -->
+</div> <!-- Конец основного контейнера -->
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

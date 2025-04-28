@@ -1,0 +1,30 @@
+﻿@using Microsoft.AspNetCore.Identity
+@using EasyBeautyASP.Models
+
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<ul class="navbar-nav">
+    @if (SignInManager.IsSignedIn(User))
+    {
+        <li class="nav-item">
+            <a id="manage" class="nav-link text-dark" asp-page="/Profile" title="Manage">
+                Здравствуйте, @UserManager.GetUserName(User)!
+            </a>
+        </li>
+        <li class="nav-item">
+            <form id="logoutForm" class="form-inline" asp-page="/Logout" asp-route-returnUrl="@Url.Page("/Index")">
+                <button id="logout" type="submit" class="nav-link btn btn-link text-dark" style="text-decoration: none;">Выйти</button>
+            </form>
+        </li>
+    }
+    else
+    {
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="register" asp-page="/Register">Регистрация</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" id="login" asp-page="/Login">Вход</a>
+        </li>
+    }
+</ul>

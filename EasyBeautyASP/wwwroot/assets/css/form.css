@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&display=swap');
+
+/* Основные контейнеры */
+.main_container {
+    margin-top: 5vw;
+    padding: 15px;
+    width: 100%;
+}
+
+.container-si {
+    background-color: transparent; /* Теперь контейнер прозрачный */
+    border-radius: 15px;
+    border: 1px solid #ccc;
+    box-shadow: none;
+    padding: 30px;
+}
+
+.signup_forms {
+    position: relative;
+    display: flex;
+    padding: 15px;
+    top: 0vw; /* Убрали лишний отступ */
+    justify-content: center;
+    background: transparent;
+}
+
+.form_content {
+    padding: 55px;
+    box-shadow: 3px 3px 15px grey;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Стили для формы */
+.form {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px 20px; /* Больше паддинга сверху/снизу */
+    width: 100%;
+    height: auto; /* ВАЖНО: убираем height: 100% */
+    text-align: center;
+}
+
+
+
+/* Инпуты */
+.input, .register-input {
+    background-color: #fdfdfe;
+    border: 2px solid #1E758F;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 8px;
+    color: #1E758F;
+    font-family: 'Lato', sans-serif;
+}
+
+    .input:focus, .register-input:focus {
+        box-shadow: 0 0 0 2px rgba(30, 117, 143, 0.3);
+        border-color: #155e74;
+        outline: none;
+    }
+
+/* Лейблы */
+.Labels, .Labels1, .register-label {
+    font-size: 14px;
+    font-family: 'Questrial', sans-serif;
+    color: #1E758F;
+    font-weight: 600;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Кнопки */
+.button, .register-button {
+    background-color: #1E758F;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    text-transform: none;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+}
+
+.button:hover, .register-button:hover {
+    background-color: #155e74;
+    cursor: pointer;
+}
+
+
+.carousel-img-wrapper {
+    padding: 0 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px; /* Фиксированная высота слайдов */
+}
+
+.carousel-img-wrapper img {
+    max-height: 100%;
+    width: auto;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+/* Ссылки */
+.login-text, .a {
+    color: #1E758F;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+    .login-text:hover, .a:hover {
+        text-decoration: underline;
+    }
+
+/* Картинки */
+.img-login, .img-signup {
+    width: 100%;
+    border-radius: 8px;
+    height: 550px;
+    object-fit: cover;
+}
+
+/* Оверлей */
+.overlay-container {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+}
+
+.overlay {
+    background-color: #6596a5;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    position: relative;
+    left: -100%;
+    height: 100%;
+    width: 200%;
+}
+
+.overlay-panel {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    top: 0;
+    height: 100%;
+    width: 50%;
+}
+
+.overlay-right {
+    right: 0;
+}
+
+/* Социальные кнопки */
+.social-container {
+    margin: 50px 0;
+}
+
+.social-container a {
+    border: 1px solid #DDDDDD;
+    border-radius: 50%;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5px;
+    height: 40px;
+    width: 40px;
+}
+
+/* Валидность */
+.input-control input {
+    border: 3px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+}
+
+    .input-control input:focus {
+        outline: 0;
+    }
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 12px;
+}
+
+/* Адаптивность */
+@media screen and (max-width: 600px) {
+    .input, .register-input {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .signup_forms {
+        top: 0;
+    }
+}

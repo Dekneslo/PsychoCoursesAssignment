@@ -1,0 +1,597 @@
+@-webkit-keyframes zoom {
+    from {
+        -webkit-transform: scale(1)
+    }
+    to {
+        -webkit-transform: scale(2)
+    }
+}
+
+@keyframes zoom {
+    from {
+        transform: scale(0.4)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@-webkit-keyframes zoom-out {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(0)
+    }
+}
+
+@keyframes zoom-out {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(0)
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    transition: font-size 0.3s ease;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 600;
+    color: #1E758F;
+    background-color: #dee4e3;
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.header {
+    animation: 1s ease-out 0s 1 slideInLeft;
+    background-color: #dee4e3;
+    height: auto;
+    align-items: center;
+}
+
+
+.navbar-style {
+    background-color: #cdd8df;
+    border-radius: 15px;
+    font-size: 18px;
+    padding: 5px 20px 5px 20px;
+}
+
+.logo {
+    height: 5vw;
+    padding: 5px 40px 5px 40px;
+}
+
+.navbar-icon {
+    margin-left: 60px;
+}
+
+.icon-bar {
+    background-color: chocolate;
+}
+
+.nav-style {
+    padding-right: 150px;
+}
+
+.li-style {
+    padding: 8px;
+}
+
+.nav-link:hover {
+    border-bottom: 2px solid rgb(4, 54, 54);
+    font-size: 20px;
+}
+
+.nav-text {
+    color: rgb(43, 116, 116);
+}
+
+#active {
+    color: rgb(4, 54, 54);
+}
+
+.caro-text {
+    text-align: center;
+}
+
+.caro-heading {
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.caro-heading-2 {
+    font-size: 25px;
+}
+
+.card-style {
+    height: 270px;
+}
+
+.card-title {
+    font-weight: bold;
+}
+
+.style-btn {
+    border-bottom: 3px solid rgb(74, 128, 128);
+    padding: 10px;
+    border-radius: 6px;
+    color: #1E758F;
+}
+
+.style-btn:hover {
+    border: 3px solid rgb(74, 128, 128);
+    padding: 10px;
+    border-radius: 6px;
+    transition-delay: 50ms;
+}
+
+.style-btn:active {
+    border: 3px solid rgb(74, 128, 128);
+    padding: 10px;
+    border-radius: 6px;
+    transition-delay: 50ms;
+    color: white;
+    background-color: rgb(74, 128, 128);
+}
+
+.style-btn-1 {
+    background-color: rgb(74, 128, 128);
+}
+
+.style-btn-2 {
+    border: 3px solid rgb(74, 128, 128);
+    padding: 8px;
+    border-radius: 6px;
+    color: #1E758F;
+}
+
+.style-btn-2:hover {
+    border: 3px solid rgb(164, 209, 209);
+    padding: 8px;
+    border-radius: 6px;
+    color: #1E758F;
+}
+
+.style-btn-2:active {
+    border: 3px solid rgb(74, 128, 128);
+    padding: 8px;
+    border-radius: 6px;
+    transition-delay: 50ms;
+    color: white;
+    background-color: rgb(74, 128, 128);
+}
+
+.product-hover {
+    -webkit-transform: rotate(15deg) scale(1.4);
+    transform: rotate(15deg) scale(1.4);
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.product-hover:hover {
+    -webkit-transform: rotate(0) scale(1);
+    transform: rotate(0) scale(1);
+    -webkit-filter: blur(0);
+    filter: blur(0);
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.card-style {
+    border-radius: 10px;
+    background-color: #d0d9d7;
+    padding: 15px;
+    height: fit-content;
+}
+
+.card {
+    background: none;
+    border: none;
+}
+
+.card-style-2 {
+    display: flex;
+    justify-content: center;
+}
+
+.card-image {
+    height: 47vh;
+}
+
+.card-text {
+    font-size: 15px;
+}
+
+.testi-image {
+    width: 100%;
+}
+
+.fa-star {
+    color: #1E758F;
+}
+
+.footer-sign {
+    margin-top: 30vh;
+}
+
+.footer-style {
+    border-top: 2px solid #1E758F;
+    background-color: #DEE4E3;
+}
+
+
+.search-input {
+    max-width: 300px;
+    border: 2px solid #1E758F;
+    border-radius: 8px;
+    padding: 8px 12px;
+    color: #1E758F;
+}
+
+.search-input:focus {
+    box-shadow: none;
+    border-color: #1E758F;
+}
+
+.search-button {
+    background-color: #1E758F;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #155e74;
+}
+
+.quantity-input {
+    max-width: 70px;
+    border: 2px solid #1E758F;
+    border-radius: 8px;
+    padding: 6px 10px;
+    color: #1E758F;
+    text-align: center;
+}
+
+
+.quantity-input:focus {
+    box-shadow: none;
+    border-color: #1E758F;
+}
+
+.add-to-cart-button {
+    background-color: #1E758F;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+    font-weight: 600;
+}
+
+.add-to-cart-button:hover {
+    background-color: #155e74;
+}
+
+
+
+/* ======================================== */
+/* Стили специально для страницы Регистрации */
+/* ======================================== */
+
+/* Фон страницы регистрации (если нужно переопределить фон контейнера) */
+/* Добавьте класс "register-page-container" к основному div в Register.cshtml */
+.register-page-container .container-si {
+    background-color: transparent; /* Убираем белый фон, чтобы показать фон body */
+    box-shadow: none; /* Можно убрать тень, если фон совпадает с body */
+    /* Или задайте конкретный цвет фона: */
+    /* background-color: #e8f5e9; */ /* Пример очень светло-зеленого */
+    padding: 30px; /* Добавим отступы, так как убрали form_content */
+    border: 1px solid #ccc; /* Можно добавить рамку для визуального отделения */
+    border-radius: 10px;
+}
+
+/* Стили для input на странице регистрации (на основе .quantity-input) */
+.register-input {
+    display: block; /* Убедимся, что занимает всю строку */
+    width: 100%; /* Занимает всю доступную ширину */
+    border: 2px solid #1E758F !important; /* Сине-зеленая рамка, !important для переопределения */
+    border-radius: 8px !important; /* Скругление углов */
+    padding: 8px 12px !important; /* Внутренние отступы (можно настроить) */
+    color: #1E758F !important; /* Цвет текста внутри поля */
+    background-color: #fdfdfe; /* Очень светлый фон для поля */
+    margin-bottom: 8px; /* Небольшой отступ снизу */
+}
+
+/* Убираем стандартную подсветку браузера при фокусе */
+.register-input:focus {
+    box-shadow: 0 0 0 2px rgba(30, 117, 143, 0.3) !important; /* Тень при фокусе в цвет рамки */
+    border-color: #155e74 !important; /* Можно чуть темнее рамку при фокусе */
+    outline: none !important; /* Убираем стандартный outline */
+}
+
+/* Стили для label на странице регистрации */
+.register-label {
+    font-size: 14px; /* Размер шрифта для label */
+    color: #1E758F; /* Цвет текста label (сине-зеленый) */
+    font-weight: 600; /* Полужирный шрифт */
+    display: block; /* Занимает всю строку */
+    margin-bottom: 5px; /* Отступ снизу от label до input */
+}
+
+/* Стили для кнопки на странице регистрации (на основе .add-to-cart-button) */
+.register-button {
+    background-color: #1E758F !important; /* Сине-зеленый фон */
+    color: #FFFFFF !important; /* Белый текст */
+    border: none !important; /* Без рамки */
+    padding: 10px 20px !important; /* Внутренние отступы (можно настроить) */
+    border-radius: 8px !important; /* Скругление углов */
+    transition: background-color 0.3s !important; /* Плавный переход цвета фона */
+    font-weight: 600 !important; /* Полужирный текст */
+    font-size: 16px; /* Размер шрифта кнопки */
+    width: 100%; /* Кнопка на всю ширину */
+    cursor: pointer; /* Указатель при наведении */
+    text-transform: none !important; /* Убираем强制大写 (если было в .button) */
+    letter-spacing: normal !important; /* Убираем强制разрядку (если было) */
+    height: auto !important; /* Убираем фиксированную высоту (если было) */
+    display: inline-block; /* Для корректного отображения */
+    text-align: center; /* Центрируем текст */
+    margin-top: 15px; /* Отступ сверху */
+}
+
+.register-button:hover {
+    background-color: #155e74 !important; /* Более темный фон при наведении */
+}
+
+/* Стили для кнопок внешних провайдеров */
+.external-provider-button {
+    background-color: #ffffff !important; /* Белый фон */
+    color: #1E758F !important; /* Сине-зеленый текст */
+    border: 1px solid #1E758F !important; /* Сине-зеленая рамка */
+    padding: 8px 14px !important;
+    border-radius: 8px !important;
+    transition: all 0.3s !important;
+    font-weight: 600 !important;
+    font-size: 14px;
+    width: auto; /* Авто ширина */
+    margin: 5px; /* Небольшие отступы */
+    display: inline-block;
+    text-align: center;
+}
+
+.external-provider-button:hover {
+    background-color: #f0fafa !important;
+    border-color: #155e74 !important;
+    color: #155e74 !important;
+}
+
+/* Убираем лишние отступы у формы, если .form_content больше не нужен */
+.register-page-container .form {
+    padding: 0; /* Убираем padding у самой формы */
+}
+
+/* Стили для чекбокса (немного кастомизируем Bootstrap) */
+.register-page-container .form-check {
+    margin-bottom: 20px !important; /* Увеличим отступ снизу */
+}
+
+.register-page-container .form-check-input {
+    border-color: #1E758F; /* Рамка чекбокса */
+    margin-top: 0.2em; /* Выравнивание с текстом */
+}
+
+.register-page-container .form-check-input:checked {
+    background-color: #1E758F; /* Фон при выборе */
+    border-color: #1E758F;
+}
+
+.register-page-container .form-check-label {
+    font-size: 14px;
+    color: #333; /* Цвет текста чекбокса */
+    padding-left: 5px; /* Отступ от чекбокса */
+}
+
+.register-page-container .form-check-input:focus {
+    box-shadow: 0 0 0 2px rgba(30, 117, 143, 0.3); /* Тень при фокусе */
+}
+
+/* Стили для сообщений валидации */
+.register-page-container .input-control .error {
+    color: #dc3545; /* Красный цвет для ошибок */
+    font-size: 12px;
+    margin-top: 4px; /* Небольшой отступ сверху */
+    display: block; /* Чтобы занимало свою строку */
+}
+
+.register-page-container .input-control.error .register-input {
+    border-color: #dc3545 !important; /* Красная рамка для поля с ошибкой */
+}
+
+.register-page-container .input-control.success .register-input {
+    border-color: #198754 !important; /* Зеленая рамка при успехе (если нужно) */
+}
+
+
+/* validation css */
+
+.input-control input {
+    border: 3px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 15px;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 12px;
+}
+
+
+/* animation css */
+
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    padding-top: 5px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 75%;
+    max-width: 75%;
+}
+
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+.modal-content,
+#caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+
+.out {
+    animation-name: zoom-out;
+    animation-duration: 0.6s;
+}
+
+#fullpage {
+    display: none;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: contain;
+    background-repeat: no-repeat no-repeat;
+    background-position: center center;
+    background-color: black;
+}
+
+@media only screen and (max-width: 700px) {
+    .modal-content {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:900px) {
+    .logo {
+        height: 15vw;
+    }
+    .header {
+        height: 95px;
+    }
+    .icon-style {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .logo {
+        height: 15vw;
+    }
+    .header {
+        height: 90px;
+    }
+    .icon-style {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:400px) {
+    .logo {
+        height: 15vw;
+    }
+    .header {
+        height: 70px;
+    }
+    .icon-style {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width:300px) {
+    .logo {
+        height: 15vw;
+    }
+    .header {
+        height: 60px;
+    }
+    .icon-style {
+        font-size: 10px;
+    }
+}
+
+@media screen and (min-width:800px) {
+    .contact-style {
+        margin-left: 15vw;
+    }
+}

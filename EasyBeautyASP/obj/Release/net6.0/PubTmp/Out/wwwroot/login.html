@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/form.css">
+    <link rel="icon" type="image/x-icon" href="assets/media/icon.ico">
+    <title>Best Beauty</title>
+</head>
+<body>
+
+  <header class="header" id="heading">
+    <nav class="navbar navbar-expand-lg sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html"><img src="assets/media/logo.png" alt="Best Beauty Logo" class="logo"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon icon-style"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <span class="nav-style">
+            <ul class="navbar-nav navbar-style me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link content" aria-current="page" href="index.html" id="active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="login.html">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="signup.html">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="#" id="main" onclick="openNav()">Modify 
+                  <i class="fa fa-sliders" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+        </span>
+          </div>
+        </div>
+      </nav>
+</header>
+
+    
+  <div class="body mt-5 mb-5 m-2">
+		<div class="container" id="container">
+      <div class="row">
+        <div class="col-md-5 col-sm-8 container-in">
+          <div class="form-container log-in-container">
+            <form action="/" class="form" id="form">
+              <h1 class="h1 pb-4">Login</h1>
+              <h5 class="login-text-1">Don't have an account? <a href="signup.html" class="login-text">Create a new one.</a></h5>
+              <div class="input-control">
+                <label class="pt-3" for="email">Email</label>
+                <input type="text" class="input" id="email" name="email">
+                <div class="error"></div>
+              </div>
+              <div class="input-control">
+                <label class="pt-3" for="password">Password</label>
+                <input type="password" class="input" id="password" name="password">
+                <div class="error"></div>
+              </div>
+              <a href="#" class="a">Forgot your password?</a>
+              <button class="button" type="submit">Log In</button>
+            </form>
+          </div>
+          <div class="overlay-container">
+            <img src="assets/media/images/product (5).jpg" alt="image" class="img-login">
+            </div>
+        </div>
+      </div>
+		</div>
+	</div>
+
+  <div class="container footer-sign">
+    <footer class="text-center text-lg-start text-muted footer-style">
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div class="me-5 d-none d-lg-block">
+    <span>Get connected with us on social networks:</span>
+    </div>
+    <div>
+    <a href="" class="me-4 link-secondary">
+      <i class="fa fa-facebook-f"></i>
+    </a>
+    <a href="" class="me-4 link-secondary">
+      <i class="fa fa-twitter"></i>
+    </a>
+    <a href="" class="me-4 link-secondary">
+      <i class="fa fa-google"></i>
+    </a>
+    <a href="" class="me-4 link-secondary">
+      <i class="fa fa-instagram"></i>
+    </a>
+    <a href="" class="me-4 link-secondary">
+      <i class="fa fa-linkedin"></i>
+    </a>
+    <a href="" class="me-4 link-secondary">
+      <i class="fa fa-github"></i>
+    </a>
+    </div>
+    </section>
+    <section class="">
+    <div class="container text-center text-md-start mt-5">
+    <div class="row mt-3">
+      <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">
+          <img src="assets/media/logo.png" alt="Best Beauty" width="100%">
+        </h6>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto!
+        </p>
+      </div>
+      <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">
+          Products
+        </h6>
+        <p>
+          <a href="#" class="text-reset">Beauty product</a>
+        </p>
+        <p>
+          <a href="#" class="text-reset">Cosmetics product</a>
+        </p>
+        <p>
+          <a href="#" class="text-reset">Cosmetics product</a>
+        </p>
+        <p>
+          <a href="#" class="text-reset">Beauty product</a>
+        </p>
+      </div>
+      <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">
+          Menu
+        </h6>
+        <p>
+          <a href="#" class="text-reset">On Sale</a>
+        </p>
+        <p>
+          <a href="#" class="text-reset">Shop</a>
+        </p>
+        <p>
+          <a href="#" class="text-reset">Pricing</a>
+        </p>
+        <p>
+          <a href="#" class="text-reset">Copyright</a>
+        </p>
+      </div>
+      <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+        <p><i class="fa fa-home me-3 text-secondary"></i> UK Nottingham</p>
+        <p>
+          <i class="fa fa-envelope me-3 text-secondary"></i>
+          Ayshehbk@hotmail.Com
+        </p>
+        <p><i class="fa fa-phone me-3 text-secondary"></i> + +44 383847288</p>
+      </div>
+    </div>
+    </div>
+    </section>
+    <!-- Copyright Section if needed-->
+    <!-- <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.025);">
+      © 2021 Copyright:
+    <a class="text-reset fw-bold" href="#">Best Beauty</a> -->
+  </div>
+  </footer>
+  </div>
+
+    <!-- sidebar -->
+    <div id="mySidebar" class="sidebar">
+      <a href="javascript:void(0)" class="closebtn closestyle" onclick="closeNav()" style="margin-top: 8vw;">&times;</a>
+      <a style="margin-top: 8vw; background-color: transparent;"></a>
+      <div class="dropdown show mb-5">
+        <a class="btn dropdown-toggle a" href="#" role="button" id="dropdownMenuLink"
+        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="margin-top: 2vw;">Change Font Size</a>
+        <div class="dropdown-menu dd-style" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item a1 font-button plus">Increase +</a>
+          <a class="dropdown-item a1 font-button minus">Decrease -</a>
+        </div>
+      </div>
+      <div class="dropdown show">
+        <a class="btn dropdown-toggle a" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+          aria-haspopup="true" aria-expanded="false" style="margin-top: 2vw;">Change Header BG</a>
+        <div class="dropdown-menu dd-style" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('aliceblue');" style="color: aliceblue;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('antiquewhite');" style="color: antiquewhite;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('aquamarine');" style="color: aquamarine;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('white');" style="color: white;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('snow');" style="color: snow;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('slategray');" style="color: slategray;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lavender');" style="color: lavender;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lemonchiffon');" style="color: lemonchiffon;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('bisque');" style="color: bisque;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lightblue');" style="color: lightblue;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lightcyan');" style="color: lightcyan;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lightpink');" style="color: lightpink;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lightyellow');" style="color: lightyellow;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('gainsboro');" style="color: gainsboro;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+          <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('honeydew');" style="color: honeydew;">
+            <i class="fa fa-square" aria-hidden="true"></i></a>
+        </div>
+      </div>
+    </div>
+    
+
+
+<script>
+  $(document).ready(function(){$(".proImg").click(function(){this.requestFullscreen()})});
+
+function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+}
+
+$('.dropdown-menu').on("click.bs.dropdown", function (e) {
+  e.stopPropagation();
+  e.preventDefault();});
+</script>
+<script src="assets/js/form.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+<script type="text/javascript">
+        $(function () {
+            $(".font-button").bind("click", function () {
+                var size = parseInt($('.content').css("font-size"));
+                if ($(this).hasClass("plus")) {
+                    size = size + 2;
+                } else {
+                    size = size - 2;
+                    if (size <= 10) {
+                        size = 10;
+                    }
+                }
+                $('.content').css("font-size", size);
+            });
+        });
+    </script>
+    
+  <script src="assets/js/login.js"></script>
+</body>
+</html>

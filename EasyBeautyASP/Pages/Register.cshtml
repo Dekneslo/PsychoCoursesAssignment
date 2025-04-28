@@ -1,0 +1,113 @@
+﻿@page
+@model RegisterModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = "_Layout";
+}
+
+@* Оборачиваем все в div с новым классом для применения стилей фона контейнера *@
+<div class="container main_container register-page-container">
+    <div class="row justify-content-center">
+        <div class="col-md-10">
+            @* container-si теперь стилизуется через .register-page-container .container-si *@
+            <div class="container-si signup_forms">
+                @* Убираем класс signup_forms если он конфликтует *@
+                <div class="row w-100 align-items-center">
+                    @* align-items-center для выравнивания колонок *@
+                    @* Левая колонка с изображением *@
+                    <div class="col-md-6 d-none d-md-flex justify-content-center align-items-center">
+                        @* Убрали signup_items, добавили flex классы Bootstrap для центрирования *@
+                        <img src="~/assets/media/images/psychowide (1).jpg" class="img-fluid rounded" alt="Регистрация" style="max-height: 500px;">
+                        @* Используем img-fluid и max-height вместо img-login *@
+                    </div>
+
+                    @* Правая колонка с формой *@
+                    <div class="col-md-6" style="background-color: transparent;">
+
+                        @* Убрали signup_items и form_content, стили теперь через родителя *@
+                        <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post" class="form">
+                            @* Убрали класс form_content отсюда *@
+                            <h2 class="h1 mb-4 text-center" style="color: #1E758F; font-weight: bold;">Создать аккаунт</h2>
+
+                            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                            @* --- Поля ввода с новыми классами --- *@
+                            <div class="mb-3 w-100 input-control">
+                                <label  class="register-label">Имя</label>
+                                <input asp-for="Input.FirstName" class="register-input" aria-required="true" />
+                                <span asp-validation-for="Input.FirstName" class="error text-danger"></span>
+                            </div>
+
+                            <div class="mb-3 w-100 input-control">
+                                <label  class="register-label">Фамилия</label>
+                                <input asp-for="Input.LastName" class="register-input" aria-required="true" />
+                                <span asp-validation-for="Input.LastName" class="error text-danger"></span>
+                            </div>
+
+                            <div class="mb-3 w-100 input-control">
+                                <label asp-for="Input.Email" class="register-label"></label>
+                                <input asp-for="Input.Email" class="register-input" autocomplete="username" aria-required="true" />
+                                <span asp-validation-for="Input.Email" class="error text-danger"></span>
+                            </div>
+
+                            <div class="mb-3 w-100 input-control">
+                                <label class="register-label">Парль</label>
+                                <input asp-for="Input.Password" type="password" class="register-input" autocomplete="new-password" aria-required="true" />
+                                <span asp-validation-for="Input.Password" class="error text-danger"></span>
+                            </div>
+
+                            <div class="mb-3 w-100 input-control">
+                                <label class="register-label">Подтвердить пароль</label>
+                                <input asp-for="Input.ConfirmPassword" type="password" class="register-input" autocomplete="new-password" aria-required="true" />
+                                <span asp-validation-for="Input.ConfirmPassword" class="error text-danger"></span>
+                            </div>
+
+                            @* Чекбокс Админа *@
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" asp-for="Input.Admin1" id="Input_Admin1" /> @* Добавлен id для скрипта *@
+                                <label class="form-check-label" asp-for="Input.Admin1">
+                                    Сделать меня администратором
+                                </label>
+                            </div>
+
+
+                            @* Поле для пароля администратора *@
+                            <div class="mb-4 w-100 input-control" id="adminPasswordSection" style="display: none;">
+                                <label class="register-label">Пароль администратора</label>
+                                <input asp-for="Input.AdministratorPassword" type="password" class="register-input" />
+                                @* Добавить span для валидации если надо *@
+                            </div>
+
+                            @* Кнопка регистрации *@
+                            <button id="registerSubmit" type="submit" class="register-button">Зарегистрироваться</button>
+                        </form>
+
+                    </div> @* End col-md-6 for form *@
+                </div> @* End row *@
+            </div> @* End container-si *@
+        </div> @* End col-md-10 *@
+    </div> @* End row justify-content-center *@
+</div> @* End register-page-container *@
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const adminCheckbox = document.getElementById('Input_Admin1');
+            const adminPasswordSection = document.getElementById('adminPasswordSection');
+
+            function toggleAdminPassword() {
+                if (adminCheckbox.checked) {
+                    adminPasswordSection.style.display = 'block';
+                } else {
+                    adminPasswordSection.style.display = 'none';
+                }
+            }
+
+            adminCheckbox.addEventListener('change', toggleAdminPassword);
+
+            // При загрузке страницы сразу применить состояние
+            toggleAdminPassword();
+        });
+    </script>
+}

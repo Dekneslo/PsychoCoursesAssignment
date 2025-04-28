@@ -1,0 +1,208 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+    Layout = "_Layout";
+}
+
+<div class="section content">
+    <div id="carouselExampleDark" class="carousel carousel-dark slide">
+        <div class="carousel-inner">
+
+            <div class="carousel-item active" data-bs-interval="10000">
+                <div class="carousel-img-wrapper">
+                    <img src="assets/media/images/psychowide (1).jpg" class="d-block mx-auto" alt="product image">
+                </div>
+                <div class="d-none d-md-block caro-text top-right">
+                    <h5 class="caro-heading content">Скидка 30%</h5>
+                    <p class="caro-heading-2 content">Детали о товаре</p>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <a asp-page="Shop" class="style-btn content">Узнать детали</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="10000">
+                <div class="carousel-img-wrapper">
+                    <img src="assets/media/images/psychowide (1).png" class="d-block mx-auto" alt="product image">
+                </div>
+                <div class="d-none d-md-block caro-text top-right">
+                    <h5 class="caro-heading content">Скидка 30%</h5>
+                    <p class="caro-heading-2 content">Детали о товаре</p>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <a asp-page="Shop" class="style-btn content">Узнать детали</a>
+                </div>
+            </div>
+
+            <div class="carousel-item" data-bs-interval="10000">
+                <div class="carousel-img-wrapper">
+                    <img src="assets/media/images/psychowide (2).jpg" class="d-block mx-auto" alt="product image">
+                </div>
+                <div class="d-none d-md-block caro-text top-right">
+                    <h5 class="caro-heading content">Скидка 30%</h5>
+                    <p class="caro-heading-2 content">Детали о товаре</p>
+                </div>
+                <div class="carousel-caption d-none d-md-block">
+                    <a asp-page="Shop" class="style-btn content">Узнать детали</a>
+                </div>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden content">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden content">Следующий</span>
+        </button>
+    </div>
+</div>
+
+  <!-- carousel -->
+  <div class="container">
+    <div class="row ">
+      <div class="col-md-6 col-sm-12">
+        <img width="100%" src="assets/media/images/psychowide (2).jpg" alt="product" class="py-5">
+      </div>
+      <div class="col-md-6 col-sm-12 my-5 ">
+        <div class="card card-style">
+          <div class="card-body">
+            <h3 class="card-title content">О нас</h3>
+                    <h6 class="card-subtitle mb-2 text-muted content">Мы — команда профессиональных психологов, педагогов и IT-специалистов,
+                        объединившихся, чтобы сделать качественное психологическое образование доступным каждому.</h6>
+                    <p class="card-text content">
+                        Наша миссия — помочь вам лучше понимать себя, развивать эмоциональный интеллект, строить гармоничные отношения и заботиться о ментальном здоровье.
+
+                        На нашей платформе вы найдёте курсы по практической психологии, психотерапии, саморазвитию и осознанности. Все материалы разработаны с учётом современных научных подходов и адаптированы под онлайн-формат.
+
+                        Будь то первый шаг в профессию или личный интерес — вы в надёжных руках.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- about us -->
+  <div class="container-fluid">
+    <div class="row pb-5">
+      <div class="col-md-12 text-center">
+        <h1 class="content">
+          Продукты на продаже
+        </h1>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-evenly">
+      <div class="col-md-5 card-style my-2">
+        <div class="row">
+          <div class="col-md-6">
+            <div style="overflow: hidden;" class="card">
+              <img src="assets/media/images/psycho (3).jpg" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>
+          </div>
+
+
+
+          <div class="col-md-6 content">
+            <h5>Психология когнитивных процессов</h5>
+                    <h2>Кому подойдёт курс: всем, кто интересуется психологией и когнитивными процессами, теоретические основы в простой форме.</h2>
+                    <h4>50$</h4>
+                    <p class="pt-3 card-text">Продолжительность: 5 уроков в записи, доступ навсегда.</p>
+                </div>
+        </div>
+      </div>
+      <div class="col-md-5 card-style my-2">
+        <div class="row">
+          <div class="col-md-6" style="overflow: hidden;">
+            <div style="overflow: hidden;" class="card">
+              <img src="assets/media/images/psycho (4).jpg" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>
+          </div>
+          <div class="col-md-6 content">
+            <!-- Reference: https://www.boots.com/thayers-alcohol-free-facial-toners-aloe-vera-witch-hazel-rose-petal-355ml-10318797 -->
+                    <h5>Стресс в жизни семьи</h5>
+                    <h2>Кому подойдёт курс: тем, кто заботится о собственном семейном благополучии и хочет подробнее разобраться в семейной психологии.</h2>
+            <h4>30$</h4>
+                    <p class="pt-3 card-text">Продолжительность: 5 недель. Для освоения одной темы потребуется от 4 до 5 часов в неделю.</p>
+                </div>
+        </div>
+      </div>
+    </div>
+    <div id="fullpage" onclick="this.style.display='none';"></div>
+  </div>
+  <!-- product -->
+  <div class="container">
+    <div class="row p-5">
+      <div class="col-md-12 text-center content">
+        <h1>
+          Психологи
+        </h1>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8 d-flex justify-content-center">
+            <div class="row">
+                <div class="col-md-3 col-sm-10">
+                    <img class="testi-image" src="assets/media/user.jpg" alt="image">
+                </div>
+                <div class="col-md-8 col-sm-2">
+                    <h3 class="mt-3 mb-3 content">Святослав</h3>
+                    <div>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                    </div>
+                    <p class="mt-3">
+                        Святослав — опытный психолог с более чем 10-летней практикой. Он помогает людям справляться со стрессом, находить гармонию в жизни и раскрывать свой внутренний потенциал. Благодаря индивидуальному подходу и глубокому пониманию человеческой психики, Святослав завоевал доверие и уважение сотен клиентов.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <!-- testimonial -->
+  <div class="container">
+    <div class="row">
+        <div class="col-md-8 col-sm-10 justify-content-center text-center contact-style">
+            <div class="row p-5">
+                <div class="col-md-12 text-center content">
+                    <h1>
+                        Связаться с нами
+                    </h1>
+                </div>
+            </div>
+            <form action="/" id="form">
+                <div class="form-floating mb-3 input-control">
+                    <input type="text" class="form-control" id="username" name="username">
+                    <label for="floatingInput">Ваше имя</label>
+                    <div class="error"></div>
+                </div>
+                <div class="form-floating mb-3 input-control">
+                    <input type="text" class="form-control" id="email" name="email">
+                    <label for="floatinginput">Электронная почта</label>
+                    <div class="error"></div>
+                </div>
+                <div class="form-floating mb-3 input-control">
+                    <input type="text" class="form-control" id="number" name="number">
+                    <label for="floatinginput">Контактный номер</label>
+                    <div class="error"></div>
+                </div>
+                <div class="form-floating mb-3 input-control">
+                    <textarea class="form-control" id="textarea" name="textarea" rows="5"></textarea>
+                    <label for="floatingTextarea">Сообщение</label>
+                    <div class="error"></div>
+                </div>
+                <div class="form-floating mb-5">
+                    <button class="button style-btn-2" type="submit">&nbsp;&nbsp; ОТПРАВИТЬ &nbsp;&nbsp;</button>
+                </div>
+            </form>
+        </div>
+    </div>
+  </div>
+
+  <!-- contact -->

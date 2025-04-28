@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/form.css">
+  <link rel="icon" type="image/x-icon" href="assets/media/icon.ico">
+  <title>Best Beauty</title>
+</head>
+
+<body>
+  <header class="header" id="heading">
+    <nav class="navbar navbar-expand-lg sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"><img src="assets/media/logo.png" alt="Best Beauty Logo"
+            class="logo"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon icon-style"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <span class="nav-style">
+            <ul class="navbar-nav navbar-style me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link content" aria-current="page" href="index.html" id="active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="contact.html">Contact Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="login.html">Log In</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="signup.html">Register</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link content nav-text" href="#" id="main" onclick="openNav()">Modify
+                  <i class="fa fa-sliders" aria-hidden="true"></i></a>
+              </li>
+            </ul>
+          </span>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <!-- header -->
+  <div class="container-fluid mt-5 mb-5">
+    <div class="row pb-4">
+      <div class="col-md-12 text-center">
+        <h1>
+          Our Products
+        </h1>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-evenly p-3">
+      <div class="col-md-5 card-style my-2">
+        <div class="row">
+          <div class="col-md-6">
+            <div style="overflow: hidden;" class="card">
+              <img src="assets/media/images/5000174990713_Anti-Wrinkle-Firm-And-Lift-Face-Wash.jpg" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>
+            <ul class="pagination pagination-md justify-content-center py-3">
+              <li class="p-1 page-item active" aria-current="page">
+                <a href="#" class="page-link">1</a>
+              </li>
+              <li class="p-1 page-item"><a class="page-link" href="#">2</a></li>
+              <li class="p-1 page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 content">
+            <!-- Reference: https://olay.co.uk/skin-care-products/face-cleanser/anti-wrinkle-face-wash-cleanser -->
+            <h5>FACE WASH</h5>
+            <h2>ANTI-WRINKLE FIRM AND LIFT FACE WASH</h2>
+            <h4>$15</h4>
+            <p class="pt-3 card-text">Helps to noticeably smooth skin texture and improve surface skin dullness
+              Promotes natural renewal of the skin's surface to reveal younger looking skin
+              Removes remaining traces of make-up and impurities
+              Ideal for women aged 40+<br>
+              This face cleanser is recommended for reveal softer and more glowing skin while beginning to fight appearance of wrinkles.</p>
+            <a href="#" class="style-btn content">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 card-style my-2">
+        <div class="row">
+          <div class="col-md-6" style="overflow: hidden;">
+            <div style="overflow: hidden;" class="card">
+              <img src="assets/media/images/product6.png" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>
+            <ul class="pagination pagination-md justify-content-center py-3">
+              <li class="p-1 page-item active" aria-current="page">
+                <span class="page-link">1</span>
+              </li>
+              <li class="p-1 page-item"><a class="page-link" href="#">2</a></li>
+              <li class="p-1 page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6 content">
+            <!-- Reference: https://www.boots.com/thayers-alcohol-free-facial-toners-aloe-vera-witch-hazel-rose-petal-355ml-10318797 -->
+            <h5>FACIAL TONER</h5>
+            <h2>Thayers Hydrating Alcohol-free Facial Toners</h2>
+            <h4>$30</h4>
+            <p class="pt-3 card-text">Our Rose Petal Alcohol-free gentle Facial Toner with Witch Hazel & Aloe Vera hydrates and 
+              balances skin pH. Our formula is suitable for all skin types. It helps to give a healthy glow & tightens pores. 
+              Plus, it prepares skin to soak in moisturizers and is a great make up base.
+              AN ALCOHOL-FREE FORMULA WITH 98% NATURAL ORIGIN INGREDIENTS</p>
+            <a href="#" class="style-btn content">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-evenly p-3">
+      <div class="col-md-5 card-style my-2">
+        <!-- reference: https://www.boots.com/beauty/luxury-beauty-skincare/luxury-beauty-gift/origins-7-piece-bestsellers-skincare-gift-set-10318306 -->
+        <div class="row">
+          <div class="col-md-6">
+            <div style="overflow: hidden;" class="card">
+              <img src="assets/media/images/product7.png" onmouseover="increase()" onmouseout="decrease()"
+                alt="Product Image" width="100%" class="proImg card-image product-hover rounded-2">
+            </div>
+            <ul class="pagination pagination-md justify-content-center py-3">
+              <li class="p-1 page-item active" aria-current="page">
+                <a href="#" class="page-link">1</a>
+              </li>
+              <li class="p-1 page-item"><a class="page-link" href="#">2</a></li>
+              <li class="p-1 page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Face Serum</h5>
+            <h2>Origins Complete Skincare Routine</h2>
+            <h4>$100</h4>
+            <p class="pt-3 card-text">Origins 7-Piece Bestsellers Skincare Gift Set
+
+              The complete skincare set featuring 7 best-sellers for your best-looking skin yet. Including 2 FULL-SIZES!</p>
+            <a href="#" class="style-btn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 card-style my-2">
+        <!-- reference: https://www.boots.com/garnier/garnier-shop-all/garnier-2in1-eye-make-up-remover-125ml-10169114 -->
+        <div class="row">
+          <div class="col-md-6">
+            <div style="overflow: hidden;" class="card">
+              <img src="assets/media/images/product8.png" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>
+            <ul class="pagination pagination-md justify-content-center py-3">
+              <li class="p-1 page-item active" aria-current="page">
+                <span class="page-link">1</span>
+              </li>
+              <li class="p-1 page-item"><a class="page-link" href="#">2</a></li>
+              <li class="p-1 page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Skin Care</h5>
+            <h2>Garnier Skin Naturals 2in1 Eye Make Up Remover</h2>
+            <h4>$10</h4>
+            <p class="pt-3 card-text">Looking for an effective yet gentle eye make-up remover? Garnier 2-in-1 Eye Make Up Remover easily removes make-up, even waterproof, whilst protecting and caring for your eyelashes.</p>
+            <a href="#" class="style-btn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-evenly p-3">
+      <div class="col-md-5 card-style my-2">
+        <div class="row">
+          <!-- reference: https://www.cultbeauty.co.uk/cult-beauty-recovery-edit-set/14013188.html -->
+          <div class="col-md-6">
+            <div style="overflow: hidden;" class="card">
+              <img src="assets/media/images/product9.png" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>
+            <ul class="pagination pagination-md justify-content-center py-3">
+              <li class="p-1 page-item active" aria-current="page">
+                <a href="#" class="page-link">1</a>
+              </li>
+              <li class="p-1 page-item"><a class="page-link" href="#">2</a></li>
+              <li class="p-1 page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Beauty Products</h5>
+            <h2>CULT BEAUTY RECOVERY EDIT</h2>
+            <h4>$20</h4>
+            <p class="pt-3 card-text">arties are in full swing, glam palettes are key to your holiday look and your plans are piling up. To keep up with the festivities, look to our carefully curated Recovery Edit. Boasting spirited savings and a whole host of skin-nourishing saviours, this edit is for those quiet moments in-between the celebrations, helping your skin (and wellbeing!) stay in tip-top shape so the good, glowy times keep rolling</p>
+            <a href="#" class="style-btn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 card-style my-2">
+        <div class="row">
+          <div class="col-md-6">
+            <div style="overflow: hidden;" class="card">
+              <img src="assets/media/images/product10.PNG" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>
+            <ul class="pagination pagination-md justify-content-center py-3">
+              <li class="p-1 page-item active" aria-current="page">
+                <span class="page-link">1</span>
+              </li>
+              <li class="p-1 page-item"><a class="page-link" href="#">2</a></li>
+              <li class="p-1 page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Beauty Product</h5>
+            <h2>GLOW RECIPE FRUIT BABIES SET</h2>
+            <h4>$30</h4>
+            <p class="pt-3 card-text">Famed for being cute, covetable and ultra-efficacious, Glow Recipe's sorbet-hued treatments are laced with results-driven actives starring everything from vitamin A to resurfacing acids. Uniting not one but five bestselling skin-renewing favourites (plus a sought-after cleanser), Fruit Babies is here to save you a trip to both the dentist and dermatologist!</p>
+            <a href="#" class="style-btn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row d-flex justify-content-evenly p-3">
+      <div class="col-md-5 card-style my-2">
+        <!-- reference: https://www.boots.com/festival/sunprotection/bondi-sands-sunscreen-lotion-spf-50plus-fragrance-free-150ml-10277724 -->
+        <div class="row">
+          <div class="col-md-6">
+            <div style="overflow: hidden;" class="card">
+              <img src="assets/media/images/product11.png" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>
+            <ul class="pagination pagination-md justify-content-center py-3">
+              <li class="p-1 page-item active" aria-current="page">
+                <a href="#" class="page-link">1</a>
+              </li>
+              <li class="p-1 page-item"><a class="page-link" href="#">2</a></li>
+              <li class="p-1 page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Skin Care</h5>
+            <h2>Bondi Sands Sunscreen Lotion</h2>
+            <h4>$15</h4>
+            <p class="pt-3 card-text">Enjoy a sun-soaked day the Bondi Sands way with our SPF 50+ sunscreen lotion. Providing UVA & UVB protection, our fragrance-free formula is fast absorbing and gentle on the skin. Developed to be water resistant for up to 4 hours so you can step in to the sun with confidence.</p>
+            <a href="#" class="style-btn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 card-style my-2">
+        <!-- reference: https://www.boots.com/olay/all-olay-products/olay-regenerist-daily-3-point-treatment-cream-moisturiser-50ml-10076108 -->
+        <div class="row">
+          <div class="col-md-6">
+            <div style="overflow: hidden;" class="card">
+              <img src="assets/media/images/product12.png" alt="image" width="100%"
+                class="proImg card-image product-hover rounded-2">
+            </div>
+            <ul class="pagination pagination-md justify-content-center py-3">
+              <li class="p-1 page-item active" aria-current="page">
+                <span class="page-link">1</span>
+              </li>
+              <li class="p-1 page-item"><a class="page-link" href="#">2</a></li>
+              <li class="p-1 page-item"><a class="page-link" href="#">3</a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <h5>Skin Care</h5>
+            <h2>Olay Regenerist 3 Point Firming Anti-Ageing Cream Moisturiser</h2>
+            <h4>$26</h4>
+            <p class="pt-3 card-text">Olay Regenerist 3 Point Anti-Ageing Firming Cream is a moisturiser with luxurious, skin-plumping formula. It firms skin for a lifted look and reduces the look of fine lines and wrinkles. Hydrates to improve elasticity and helps exfoliate, smooth and revitalize the look of the skin</p>
+            <a href="#" class="style-btn">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+   
+  </div>
+  <!-- all products -->
+
+  <div class="container">
+    <footer class="text-center text-lg-start text-muted footer-style">
+      <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <div class="me-5 d-none d-lg-block">
+          <span>Get connected with us on social networks:</span>
+        </div>
+        <div>
+          <a href="" class="me-4 link-secondary">
+            <i class="fa fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fa fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fa fa-google"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fa fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fa fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 link-secondary">
+            <i class="fa fa-github"></i>
+          </a>
+        </div>
+      </section>
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <div class="row mt-3">
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                <img src="assets/media/logo.png" alt="Best Beauty" width="100%">
+              </h6>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto!
+              </p>
+            </div>
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                Products
+              </h6>
+              <p>
+                <a href="#" class="text-reset">Beauty product</a>
+              </p>
+              <p>
+                <a href="#" class="text-reset">Cosmetics product</a>
+              </p>
+              <p>
+                <a href="#" class="text-reset">Cosmetics product</a>
+              </p>
+              <p>
+                <a href="#" class="text-reset">Beauty product</a>
+              </p>
+            </div>
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">
+                Menu
+              </h6>
+              <p>
+                <a href="#" class="text-reset">On Sale</a>
+              </p>
+              <p>
+                <a href="#" class="text-reset">Shop</a>
+              </p>
+              <p>
+                <a href="#" class="text-reset">Pricing</a>
+              </p>
+              <p>
+                <a href="#" class="text-reset">Copyright</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fa fa-home me-3 text-secondary"></i> UK Nottingham</p>
+              <p>
+                <i class="fa fa-envelope me-3 text-secondary"></i>
+                Ayshehbk@hotmail.Com
+              </p>
+              <p><i class="fa fa-phone me-3 text-secondary"></i> + +44 383847288</p>
+            </div>
+          </div>
+        </div>
+      </section>    
+  
+  </footer>
+  </div>
+  <!-- footer -->
+
+
+  <!-- sidebar -->
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn closestyle" onclick="closeNav()" style="margin-top: 8vw;">&times;</a>
+    <a style="margin-top: 8vw; background-color: transparent;"></a>
+    <div class="dropdown show mb-5">
+      <a class="btn dropdown-toggle a" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" style="margin-top: 2vw;">Change Font Size</a>
+      <div class="dropdown-menu dd-style" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item a1 font-button plus">Increase +</a>
+        <a class="dropdown-item a1 font-button minus">Decrease -</a>
+      </div>
+    </div>
+    <div class="dropdown show">
+      <a class="btn dropdown-toggle a" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false" style="margin-top: 2vw;">Change Header BG</a>
+      <div class="dropdown-menu dd-style" aria-labelledby="dropdownMenuLink">
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('aliceblue');" style="color: aliceblue;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('antiquewhite');" style="color: antiquewhite;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('aquamarine');" style="color: aquamarine;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('white');" style="color: white;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('snow');" style="color: snow;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('slategray');" style="color: slategray;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lavender');" style="color: lavender;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lemonchiffon');" style="color: lemonchiffon;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('bisque');" style="color: bisque;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lightblue');" style="color: lightblue;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lightcyan');" style="color: lightcyan;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lightpink');" style="color: lightpink;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('lightyellow');" style="color: lightyellow;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('gainsboro');" style="color: gainsboro;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+        <a class="dropdown-item a1" href="#" onclick="changeHeadingBg('honeydew');" style="color: honeydew;">
+          <i class="fa fa-square" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script>
+    $(document).ready(function () { $(".proImg").click(function () { this.requestFullscreen() }) });
+
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "250px";
+      document.getElementById("main").style.marginLeft = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginLeft = "0";
+    }
+
+    $('.dropdown-menu').on("click.bs.dropdown", function (e) {
+      e.stopPropagation();
+      e.preventDefault();
+    });
+  </script>
+  <script src="assets/js/form.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+    integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    $(function () {
+      $(".font-button").bind("click", function () {
+        var size = parseInt($('.content').css("font-size"));
+        if ($(this).hasClass("plus")) {
+          size = size + 2;
+        } else {
+          size = size - 2;
+          if (size <= 10) {
+            size = 10;
+          }
+        }
+        $('.content').css("font-size", size);
+      });
+    });
+  </script>
+</body>
+
+</html>
