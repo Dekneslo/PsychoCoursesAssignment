@@ -1,0 +1,25 @@
+﻿@page
+@model EasyBeautyASP.Pages.MyCoursesModel
+@{
+    ViewData["Title"] = "Мои курсы";
+}
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4 content">Мои курсы</h2>
+
+    @if (Model.Courses.Any())
+    {
+        <ul class="list-group">
+            @foreach (var course in Model.Courses)
+            {
+                <li class="list-group-item d-flex justify-content-between">
+                    <span>@course.ProductName</span>
+                    <a href="@course.ProductDownloadLink" target="_blank" class="btn btn-outline-primary">Скачать</a>
+                </li>
+            }
+        </ul>
+    }
+    else
+    {
+        <p class="text-muted text-center">Вы ещё не приобрели ни одного курса.</p>
+    }
+</div>

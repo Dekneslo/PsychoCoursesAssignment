@@ -1,43 +1,58 @@
 ﻿@page
 @model EasyBeautyASP.Pages.NewProductsModel
 @{
-	ViewData["Title"] = "New Product Admin Page";
+    ViewData["Title"] = "Добавить новый товар";
     Layout = "_Layout";
 }
 
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4 content">Добавить товар</h2>
 
-<div class="form_content">
-              <form method="post" class="form" >
-                <div class="forms_text pb-3">                  
-                </div>
-                <div class="input-control p-2">
-                  <label><span class="Labels">Product Id</span></label>
-                  <input type="text" class="inputs" asp-for="@Model.Products.ProductId">                  
-                </div>
-                <div class="input-control p-2">
-                  <label><span class="Labels">Product Name</span></label>
-                  <input type="text" class="inputs" asp-for="@Model.Products.ProductName">                  
-                </div>
-                <div class="input-control p-2">
-                  <label><span class="Labels">Product First Description</span></label>
-                  <input type="text" class="inputs" asp-for="@Model.Products.ProductFirstDescription">                  
-                </div>
-                <div class="input-control p-2">
-                  <label><span class="Labels">Product Second Description</span></label>
-                  <input type="text" class="inputs" asp-for="@Model.Products.ProductSecondDescription">                  
-                </div>
-                <div class="input-control p-2">
-                  <label><span class="Labels">Product Price</span></label>
-                  <input type="text" class="inputs" asp-for="@Model.Products.ProductPrice">                  
-                </div>
-                <div class="input-control p-2">
-                  <label><span class="Labels">Product Add New Image</span></label>
-                  <input type="file">                  
-                </div>
-                <div class="input-control p-2">
-                  <label><span class="Labels">Product Image, just type in Name of the Image with extension</span></label>
-                  <input type="text" class="inputs" asp-for="@Model.Products.ProductImage">                  
-                </div>
-                <button type="submit">Save</button>
-              </form>
+    <form method="post" enctype="multipart/form-data" class="form wide-form">
+        <div class="mb-3 input-control">
+            <label class="register-label">Название</label>
+            <input type="text" asp-for="Products.ProductName" class="register-input" />
+            <span asp-validation-for="Products.ProductName" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3 input-control">
+            <label class="register-label">Первое описание</label>
+            <textarea asp-for="Products.ProductFirstDescription" class="register-textarea"></textarea>
+            <span asp-validation-for="Products.ProductFirstDescription" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3 input-control">
+            <label class="register-label">Второе описание</label>
+            <textarea asp-for="Products.ProductSecondDescription" class="register-textarea"></textarea>
+            <span asp-validation-for="Products.ProductSecondDescription" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3 input-control">
+            <label class="register-label">Цена ($)</label>
+            <input type="number" asp-for="Products.ProductPrice" class="register-input" />
+            <span asp-validation-for="Products.ProductPrice" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3 input-control">
+            <label class="register-label">Ссылка на курс (облако)</label>
+            <input type="text" asp-for="Products.ProductDownloadLink" class="register-input" />
+            <span asp-validation-for="Products.ProductDownloadLink" class="text-danger"></span>
+        </div>
+
+        <div class="mb-3 input-control">
+            <label class="register-label">Загрузить изображение</label>
+            <input type="file" asp-for="UploadedImage" class="form-control" />
+            <span asp-validation-for="UploadedImage" class="text-danger"></span>
+        </div>
+
+
+        <div class="d-flex gap-3">
+            <button type="submit" class="register-button" style="width: auto;">Сохранить</button>
+            <a asp-page="./ShopAdmin" class="button" style="background-color: #ccc; color: #1E758F; width: auto;">Отмена</a>
+        </div>
+    </form>
 </div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -13,6 +13,8 @@ namespace EasyBeautyASP.Pages
 
         public IList<ApplicationUser> Users { get; set; }
         public List<Product> Products { get; set; }
+        public List<Blog> Blogs { get; set; }
+
 
         public readonly ApplicationDbContext _db;
 
@@ -27,6 +29,7 @@ namespace EasyBeautyASP.Pages
         {
             Products = _db.Products.ToList();
             Users = _userManager.Users.ToList();
+            Blogs = _db.Blogs.OrderByDescending(b => b.DatePublished).ToList(); // 👍
         }
 
         public async Task<IActionResult> OnPostDeleteUserAsync(string id)
@@ -51,5 +54,17 @@ namespace EasyBeautyASP.Pages
 
             return RedirectToPage("/ShopAdmin");
         }
+
+        public IActionResult OnPostDeleteBlog(int id)
+        {
+            var blog = _db.Blogs.Find(id);
+            if (blog != null)
+            {
+                _db.Blogs.Remove(blog);
+                _db.SaveChanges();
+            }
+            return RedirectToPage(); 
+        }
+
     }
 }

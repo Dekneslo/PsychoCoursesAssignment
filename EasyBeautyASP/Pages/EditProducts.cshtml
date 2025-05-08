@@ -1,37 +1,54 @@
 ﻿@page
 @model EasyBeautyASP.Pages.EditProductsModel
 @{
-	ViewData["Title"] = "New Product Admin Page";
+    ViewData["Title"] = "Редактировать товар";
     Layout = "_Layout";
 }
 
-<h1>Edit Products</h1>
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4 content">Редактировать товар</h2>
 
-<form method="post">
-    <div>
-        <label for="name">Id</label>
-        <input type="text" asp-for="@Model.Products.ProductId" readonly/>
-    </div>
-    <div>
-        <label for="name">Name</label>
-        <input type="text" asp-for="@Model.Products.ProductName" />
-    </div>
-    <div>
-        <label for="description">First Description</label>
-        <input asp-for=@Model.Products.ProductFirstDescription />
-    </div>
-    <div>
-        <label for="description">Second Description</label>
-        <input asp-for=@Model.Products.ProductSecondDescription />
-    </div>
-    <div>
-        <label for="price">Price</label>
-        <input type="number" asp-for="@Model.Products.ProductPrice" />
-    </div>
-    <div>
-        <label for="price">Price</label>
-        <input  asp-for="@Model.Products.ProductImage" />
-    </div>
-    <button type="submit">Save</button>
-    <a asp-page="./ShopAdmin">Cancel</a>
-</form>
+    <form method="post" class="form  wide-form">
+        <div class="mb-3 input-control">
+            <label class="register-label" for="ProductId">ID</label>
+            <input type="text" asp-for="Products.ProductId" class="register-input" readonly />
+        </div>
+
+        <div class="mb-3 input-control">
+            <label class="register-label" for="ProductName">Название</label>
+            <input type="text" asp-for="Products.ProductName" class="register-input" />
+        </div>
+
+        <div class="mb-3 input-control">
+            <label class="register-label" for="ProductFirstDescription">Первое описание</label>
+            <textarea asp-for="Products.ProductFirstDescription" class="register-textarea" rows="3"></textarea>
+        </div>
+
+        <div class="mb-3 input-control">
+            <label class="register-label" for="ProductSecondDescription">Второе описание</label>
+            <textarea asp-for="Products.ProductSecondDescription" class="register-textarea" rows="3"></textarea>
+        </div>
+
+        <div class="mb-3 input-control">
+            <label class="register-label" for="ProductPrice">Цена ($)</label>
+            <input type="number" asp-for="Products.ProductPrice" class="register-input" />
+        </div>
+
+        <div class="mb-3 input-control">
+            <label class="register-label">Ссылка на курс (облако)</label>
+            <input type="text" asp-for="Products.ProductDownloadLink" class="register-input" />
+            <span asp-validation-for="Products.ProductDownloadLink" class="text-danger"></span>
+        </div>
+
+
+        <div class="mb-4 input-control">
+            <label class="register-label" for="ProductImage">Ссылка на изображение</label>
+            <input asp-for="Products.ProductImage" class="register-input" />
+        </div>
+
+        <div class="d-flex gap-3">
+            <button type="submit" class="register-button" style="width: auto;">Сохранить</button>
+            <a asp-page="./ShopAdmin" class="button" style="background-color: #ccc; color: #1E758F; width: auto;">Отмена</a>
+        </div>
+    </form>
+</div>

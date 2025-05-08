@@ -1,60 +1,114 @@
 ﻿@page
 @model EasyBeautyASP.Pages.ShopAdminModel
 @{
-	ViewData["Title"] = "Product Admin Page";
+    ViewData["Title"] = "Администрирование товаров";
     Layout = "_Layout";
 }
 
-<a asp-page="NewProducts">Add New Product to the Website here!</a>
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4 content">Панель администратора</h2>
 
-<h1>List of Products</h1>
+    <div class="text-center mb-4">
+        <a asp-page="NewProducts" class="button" style="width: auto; padding: 10px 20px;">Добавить новый товар</a>
+    </div>
 
-<table style="margin-top: 50px;">
-    <thead>
-        <tr>
-            <th style="padding-right: 20px">ID                      |</th>
-            <th style="padding-right: 20px">Name                    |</th>
-            <th style="padding-right: 20px">Description             |</th>
-            <th style="padding-right: 20px">Price                   |</th>
-            <th style="padding-right: 20px">Actions:                |</th>
-            <th style="padding-right: 20px">Actions:                |</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var product in Model.Products)
-        {
-            <tr>
-                <td style="padding-right: 20px">@product.ProductId</td>
-                <td style="padding-right: 20px">@product.ProductName</td>
-                <td style="padding-right: 20px">@product.ProductFirstDescription</td>
-                <td style="padding-right: 20px">@product.ProductPrice</td>
-                <td style="padding-right: 20px"><a asp-page="/EditProducts" asp-route-id="@product.ProductId">Update</a></td>
-                <td style="padding-right: 20px"><a asp-page="/DeleteProducts" asp-route-id="@product.ProductId">Delete</a></td>
-                
-            </tr>
-        }
-    </tbody>
-</table>
+    <h4 class="text-center mt-5 mb-3 content">Список товаров</h4>
 
+    <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle" style="font-family: 'Lato', sans-serif;">
+            <thead class="table-light">
+                <tr style="font-size: 18px; font-weight: 700; color: #1E758F;">
+                    <th>ID</th>
+                    <th>Название</th>
+                    <th>Описание</th>
+                    <th>Цена</th>
+                    <th>Ссылка</th>
+                    <th colspan="2">Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var product in Model.Products)
+                {
+                    <tr>
+                        <td>@product.ProductId</td>
+                        <td>@product.ProductName</td>
+                        <td>@product.ProductFirstDescription</td>
+                        <td>@product.ProductPrice $</td>
+                        <td><a href="@product.ProductDownloadLink" target="_blank">Открыть</a></td>
+                        <td>
+                            <a asp-page="/EditProducts" asp-route-id="@product.ProductId" class="btn btn-warning btn-sm">Изменить</a>
+                        </td>
+                        <td>
+                            <a asp-page="/DeleteProducts" asp-route-id="@product.ProductId" class="btn btn-danger btn-sm">Удалить</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
 
-<table style="margin: 50px;">
-    <thead>
-        <tr>
-            <th style="padding-right: 20px">ID</th>
-            <th style="padding-right: 20px">Name</th>
-            <th style="padding-right: 20px">Email</th>
-            <th style="padding-right: 20px">Actions:                |</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var customer in Model.Users)
-        {
-            <tr>
-                <td style="padding-right: 20px">@customer.Id</td>
-                <td style="padding-right: 20px">@customer.FirstName</td>
-                <td style="padding-right: 20px">@customer.Email</td>
-                <td style="padding-right: 20px"><a asp-page="/DeleteUsers" asp-route-id="@customer.Id">Delete</a></td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <h4 class="text-center mt-5 mb-3 content">Список пользователей</h4>
+
+    <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle" style="font-family: 'Lato', sans-serif;">
+            <thead class="table-light">
+                <tr style="font-size: 18px; font-weight: 700; color: #1E758F;">
+                    <th>ID</th>
+                    <th>Имя</th>
+                    <th>Email</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var customer in Model.Users)
+                {
+                    <tr>
+                        <td>@customer.Id</td>
+                        <td>@customer.FirstName</td>
+                        <td>@customer.Email</td>
+                        <td>
+                            <a asp-page="/DeleteUsers" asp-route-id="@customer.Id" class="btn btn-danger btn-sm">Удалить</a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+    <h4 class="text-center mt-5 mb-3 content">Блог</h4>
+
+    <div class="text-end mb-3">
+        <a asp-page="CreateBlog" class="btn btn-success">Добавить статью</a>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-bordered text-center align-middle" style="font-family: 'Lato', sans-serif;">
+            <thead class="table-light">
+                <tr style="font-size: 18px; font-weight: 700; color: #1E758F;">
+                    <th>ID</th>
+                    <th>Название</th>
+                    <th>Дата публикации</th>
+                    <th colspan="2">Действия</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var blog in Model.Blogs)
+                {
+                    <tr>
+                        <td>@blog.Id</td>
+                        <td>@blog.Title</td>
+                        <td>@blog.DatePublished.ToShortDateString()</td>
+                        <td>
+                            <a asp-page="/EditBlog" asp-route-id="@blog.Id" class="btn btn-warning btn-sm">Редактировать</a>
+                        </td>
+                        <td>
+                            <form method="post" asp-page-handler="DeleteBlog" asp-route-id="@blog.Id" onsubmit="return confirm('Удалить статью?');">
+                                <button class="btn btn-danger btn-sm" type="submit">Удалить</button>
+                            </form>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

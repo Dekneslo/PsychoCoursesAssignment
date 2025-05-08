@@ -20,12 +20,24 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/Blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/BlogDetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQmxvZ0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/Cart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2FydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/CreateBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ3JlYXRlQmxvZy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/DeleteProducts.cshtml]
@@ -36,8 +48,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRGVsZXRlVXNlcnMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/EditBlog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdEJsb2cuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/EditProducts.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRWRpdFByb2R1Y3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/FakePayment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRmFrZVBheW1lbnQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/Index.cshtml]
@@ -50,6 +70,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/Logout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTG9nb3V0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/MyCourses.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTXlDb3Vyc2VzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Артем/EasyBeautyASP/EasyBeautyASP/Pages/NewProducts.cshtml]

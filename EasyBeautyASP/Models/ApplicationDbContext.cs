@@ -14,9 +14,13 @@ namespace EasyBeautyASP.Models
 
         public DbSet<CartItem> CartItems { get; set; }
 
-        
+        public DbSet<UserCourse> UserCourses { get; set; }
+
+        public DbSet<Blog> Blogs { get; set; }
+
+
     }
 
 
-    
+
 }

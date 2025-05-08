@@ -1,0 +1,22 @@
+@page
+@model EasyBeautyASP.Pages.BlogsModel
+@{
+    ViewData["Title"] = "Блог";
+    Layout = "_Layout";
+}
+
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4">Блог</h2>
+    @foreach (var blog in Model.Blogs)
+    {
+    <div class="card mb-4">
+        <img src="~/assets/media/blogs/@blog.Image" class="card-img-top" alt="Blog Image" style="width: 100%; max-width: 800px; height: auto; margin: 0 auto; display: block;">
+        <div class="card-body">
+            <h4 class="card-title">@blog.Title</h4>
+            <p class="card-text"><small class="text-muted">@blog.DatePublished.ToShortDateString()</small></p>
+            <p>@blog.Description</p>
+            <a asp-page="/BlogDetails" asp-route-id="@blog.Id" class="btn btn-outline-primary">Читать далее</a>
+        </div>
+    </div>
+    }
+</div>

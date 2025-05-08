@@ -4,12 +4,20 @@
 @inject SignInManager<ApplicationUser> SignInManager
 @inject UserManager<ApplicationUser> UserManager
 
+@{
+    ApplicationUser currentUser = null;
+    if (SignInManager.IsSignedIn(User))
+    {
+        currentUser = await UserManager.GetUserAsync(User);
+    }
+}
+
 <ul class="navbar-nav">
-    @if (SignInManager.IsSignedIn(User))
+    @if (currentUser != null)
     {
         <li class="nav-item">
-            <a id="manage" class="nav-link text-dark" asp-page="/Profile" title="Manage">
-                Здравствуйте, @UserManager.GetUserName(User)!
+            <a id="manage" class="nav-link text-dark" asp-page="/MyCourses" title="Manage">
+                Здравствуйте, @currentUser.FirstName!
             </a>
         </li>
         <li class="nav-item">

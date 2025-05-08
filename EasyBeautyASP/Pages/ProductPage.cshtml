@@ -5,7 +5,7 @@
     Layout = "_Layout";
 }
 
-<div class="col-md-5 card-style my-2" style="margin: 0px auto;">
+<div class="col-md-6 card-style my-2" style="margin: 0px auto;">
         <div class="row">
           <div class="col-md-6">
             <div style="overflow: hidden;" class="card">
@@ -19,12 +19,26 @@
             <h2>@Model.Products.ProductFirstDescription</h2>
             <p class="pt-3 card-text">@Model.Products.ProductSecondDescription</p>
             <h4>$@Model.Products.ProductPrice</h4>
-            <form method="post" asp-page-handler="AddToCart">
-                <input type="hidden" name="userId" value="@User.Identity.Name" />
-                <input type="hidden" name="productId" value="@Model.Products.ProductId" />
-                <input type="number" name="quantity" value="1" />
-                <button type="submit" class="style-btn content">Add to Cart</button>
-            </form>
+            @if (User.Identity?.IsAuthenticated ?? false)
+            {
+                <form method="post" asp-page-handler="AddToCart">
+                    <input type="hidden" name="userId" value="@User.Identity.Name" />
+                    <input type="hidden" name="productId" value="@Model.Products.ProductId" /> 
+                    <input type="number" class="mt-3 form-control quantity-input" name="quantity" value="1" />
+                    <button type="submit" class="mt-3 btn btn-primary add-to-cart-button">Add to Cart</button>
+                </form>
+            }
+            else
+            {
+                <div>
+                    <input type="number" class="mt-3 form-control quantity-input" value="1" disabled />
+                    <button type="button" class="mt-3 btn btn-primary add-to-cart-button"
+                            onclick="alert('Пожалуйста, авторизуйтесь, чтобы добавить товар в корзину.')">
+                        Add to Cart
+                    </button>
+                </div>
+            }
+
           </div>
         </div>
       </div>

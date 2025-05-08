@@ -29,6 +29,26 @@
       "PackagePath": "staticwebassets\\assets\\js\\signup.js"
     },
     {
+      "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\blogs\\1636065847_30-papik-pro-p-psikholog-vektornii-risunok-33.png",
+      "PackagePath": "staticwebassets\\assets\\media\\blogs\\1636065847_30-papik-pro-p-psikholog-vektornii-risunok-33.png"
+    },
+    {
+      "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\blogs\\9907ce3257aba44f9f03738730c9580d.jpg",
+      "PackagePath": "staticwebassets\\assets\\media\\blogs\\9907ce3257aba44f9f03738730c9580d.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\blogs\\a6cc5c5a-cb6f-4f23-b96d-510f2576c54e.jpg",
+      "PackagePath": "staticwebassets\\assets\\media\\blogs\\a6cc5c5a-cb6f-4f23-b96d-510f2576c54e.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\blogs\\face-535769.jpg",
+      "PackagePath": "staticwebassets\\assets\\media\\blogs\\face-535769.jpg"
+    },
+    {
+      "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\blogs\\poster_event_1656094.jpg",
+      "PackagePath": "staticwebassets\\assets\\media\\blogs\\poster_event_1656094.jpg"
+    },
+    {
       "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\icon.ico",
       "PackagePath": "staticwebassets\\assets\\media\\icon.ico"
     },
@@ -125,8 +145,20 @@
       "PackagePath": "staticwebassets\\assets\\media\\images\\psychowide (2).jpg"
     },
     {
+      "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\images\\skateboarding1.png",
+      "PackagePath": "staticwebassets\\assets\\media\\images\\skateboarding1.png"
+    },
+    {
+      "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\images\\u_CCvdxBZAs.jpg",
+      "PackagePath": "staticwebassets\\assets\\media\\images\\u_CCvdxBZAs.jpg"
+    },
+    {
       "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\logo.png",
       "PackagePath": "staticwebassets\\assets\\media\\logo.png"
+    },
+    {
+      "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\u_CCvdxBZAs.jpg",
+      "PackagePath": "staticwebassets\\assets\\media\\u_CCvdxBZAs.jpg"
     },
     {
       "Id": "C:\\Users\\Артем\\EasyBeautyASP\\EasyBeautyASP\\wwwroot\\assets\\media\\user.jpg",

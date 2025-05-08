@@ -1,23 +1,24 @@
 ﻿@page
 @model EasyBeautyASP.Pages.DeleteProductsModel
 @{
-    ViewData["Title"] = "Delete Products";
+    ViewData["Title"] = "Удаление товара";
     Layout = "_Layout";
 }
 
-<h1>Delete Product</h1>
+<div class="container mt-5 mb-5">
+    <h2 class="text-center content mb-4">Вы уверены, что хотите удалить этот товар?</h2>
 
-<p>Are you sure you want to delete the following product?</p>
-
-<form>
-    <input type="text" asp-for="@Model.Products.ProductId" readonly/>
-     <input type="text" asp-for="@Model.Products.ProductName" readonly/>
-</form>    
-
-
-<form method="post">
-    <div class="form-group">
-        <input type="submit" value="Delete" class="btn btn-danger" />
-        <a asp-page="./ShopAdmin" class="btn btn-secondary">Cancel</a>
+    <div class="card p-4 shadow-sm mb-4">
+        <div class="mb-3">
+            <strong>ID товара:</strong> @Model.Products.ProductId
+        </div>
+        <div class="mb-3">
+            <strong>Название:</strong> @Model.Products.ProductName
+        </div>
     </div>
-</form>
+
+    <form method="post" class="d-flex gap-3">
+        <input type="submit" value="Удалить" class="btn btn-danger" />
+        <a asp-page="./ShopAdmin" class="btn btn-secondary">Отмена</a>
+    </form>
+</div>

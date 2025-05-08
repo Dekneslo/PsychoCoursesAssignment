@@ -1,0 +1,26 @@
+﻿@page
+@model EasyBeautyASP.Pages.CreateBlogModel
+
+<div class="container mt-5 mb-5">
+    <h2 class="mb-4 text-center">Добавить статью</h2>
+
+    <form method="post" enctype="multipart/form-data">
+        <div class="mb-3">
+            <label>Заголовок</label>
+            <input asp-for="Blog.Title" class="form-control" />
+        </div>
+        <div class="mb-3">
+            <label>Краткое описание</label>
+            <textarea asp-for="Blog.Description" class="form-control"></textarea>
+        </div>
+        <div class="mb-3">
+            <label>Полный текст</label>
+            <textarea asp-for="Blog.Content" class="form-control" rows="6"></textarea>
+        </div>
+        <div class="mb-3">
+            <label>Изображение</label>
+            <input type="file" asp-for="UploadedImage" class="form-control" />
+        </div>
+        <button type="submit" class="btn btn-primary">Сохранить</button>
+    </form>
+</div>

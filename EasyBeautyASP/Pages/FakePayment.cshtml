@@ -1,0 +1,28 @@
+﻿@page
+@model EasyBeautyASP.Pages.FakePaymentModel
+@{
+    ViewData["Title"] = "Оплата";
+}
+<div class="container mt-5 mb-5 text-center">
+    <h2 class="mb-4">Фейковая оплата</h2>
+    <p>Вы собираетесь купить следующие курсы:</p>
+
+    <ul class="list-group mb-4">
+        @foreach (var item in Model.CartItems)
+        {
+            <li class="list-group-item">
+                <strong>@item.Product.ProductName</strong> — @item.Product.ProductPrice $ × @item.Quantity = @(item.Product.ProductPrice * item.Quantity) $
+            </li>
+        }
+    </ul>
+
+    <p class="mt-3" style="font-size: 18px;">
+        <strong>Итоговая сумма: @Model.TotalPrice $</strong>
+    </p>
+
+    <form method="post">
+        <button type="submit" class="register-button" style="width: auto; padding: 10px 25px;">
+            Оплатить все
+        </button>
+    </form>
+</div>

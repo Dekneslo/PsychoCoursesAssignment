@@ -1,0 +1,14 @@
+﻿@page "{id:int}"
+@model EasyBeautyASP.Pages.BlogDetailsModel
+@{
+    ViewData["Title"] = "Детали блога";
+    Layout = "_Layout";
+}
+
+
+<div class="container mt-5 mb-5">
+    <h2>@Model.Blog.Title</h2>
+    <p class="text-muted">@Model.Blog.DatePublished.ToString("d MMM yyyy")</p>
+    <img src="~/assets/media/blogs/@Model.Blog.Image" alt="Blog Image" class="img-fluid mb-4" />
+    <div>@Html.Raw(Model.Blog.Content)</div>
+</div>

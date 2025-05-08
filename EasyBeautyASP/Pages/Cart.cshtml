@@ -1,55 +1,79 @@
 ﻿@page
 @model EasyBeautyASP.Pages.CartModel
 @{
+    ViewData["Title"] = "Корзина";
 }
 
+<div class="container mt-5 mb-5">
+    <h2 class="text-center mb-4 content">Ваша корзина</h2>
+
+    @if (Model.CartItems == null)
+    {
+        <p class="text-center text-danger">Произошла ошибка: корзина не загружена.</p>
+    }
+    else if (Model.CartItems.Count == 0)
+    {
+        <p class="text-center text-muted">Ваша корзина пуста.</p>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-bordered text-center align-middle" style="font-family: 'Lato', sans-serif;">
+                <thead class="table-light">
+                    <tr style="font-size: 18px; font-weight: 700; color: #1E758F;">
+                        <th>Товар</th>
+                        <th>Цена</th>
+                        <th>Количество</th>
+                        <th>Сумма</th>
+                        <th colspan="2">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.CartItems)
+                    {
+                        <tr>
+                            <td>@item.Product.ProductName</td>
+                            <td>@item.Product.ProductPrice $</td>
+                            <td>@item.Quantity</td>
+                            <td>@(item.Product.ProductPrice * item.Quantity) $</td>
+                            <td>
+                                <form asp-page-handler="UpdateCart" method="post" class="d-flex align-items-center justify-content-center gap-2">
+                                    <input type="hidden" name="cartItemId" value="@item.Id" />
+                                    <input type="number" name="quantity" value="@item.Quantity"
+                                           class="form-control text-center"
+                                           style="width: 70px; border: 2px solid #1E758F; border-radius: 6px;" />
+                                    <button type="submit" class="button-edit"
+                                            style="width: auto; padding: 5px 12px; font-size: 14px;">
+                                        Обновить
+                                    </button>
+                                </form>
+                            </td>
+                            <td>
+                                <form asp-page-handler="RemoveFromCart" method="post">
+                                    <input type="hidden" name="cartItemId" value="@item.Id" />
+                                    <button type="submit" class="button-edit"
+                                            style="background-color: #dc3545; padding: 5px 10px; font-size: 13px; border-radius: 6px;">
+                                        ✕
+                                    </button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                    <tr>
+                        <td colspan="6" class="text-end" style="font-size: 18px; font-weight: bold; color: #1E758F;">
+                            Общая сумма: @Model.ShoppingCartTotal $
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Кнопка перехода к фейковой оплате -->
+        <a asp-page="/FakePayment" class="register-button" style="width: auto; padding: 10px 25px;">
+            Оплатить все
+        </a>
 
 
-<table style="margin: 100px;">
-    <thead>
-        <tr>
-            <th style="padding-right: 30px;">Product</th>
-            <th style="padding-right: 30px;">Price</th>
-            <th style="padding-right: 30px;">Quantity</th>
-            <th style="padding-right: 30px;">Total</th>
-            <th style="padding-right: 30px;">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        @if (Model.CartItems == null)
-        {
-            <p>CartItems is null</p>
-        }
-        else if (Model.CartItems.Count == 0)
-        {
-            <p>Cart is empty</p>
-        }
-        else
-        {
+    }
 
-        @foreach (var item in Model.CartItems)
-        {
-            <tr>
-                <td style="padding-right: 30px;">@item.Product.ProductName</td>
-                <td style="padding-right: 30px;">@item.Product.ProductPrice</td>
-                <td style="padding-right: 30px;">@item.Quantity</td>
-                <td style="padding-right: 30px;">@(item.Product.ProductPrice * item.Quantity)</td>
-                <td style="padding-right: 30px;">
-                    <form asp-page-handler="UpdateCart" method="post">
-                        <input type="hidden" name="cartItemId" value="@item.Id" />
-                        <input type="number" class="form-control" name="quantity" value="@item.Quantity" />
-                        <button type="submit">Update</button>
-                    </form>     
-                </td>
-                <td style="padding-right: 30px;">
-                    <form asp-page-handler="RemoveFromCart" method="post">
-                        <input type="hidden" name="cartItemId" value="@item.Id" />
-                        <button type="submit">Remove</button>
-                    </form>
-                </td>               
-            </tr>
-        }
-        }
-         <td style="padding-right: 30px;">The Total Price: $@Model.ShoppingCartTotal</td>
-    </tbody>
-</table>
+</div>

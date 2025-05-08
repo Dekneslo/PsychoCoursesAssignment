@@ -61,11 +61,24 @@
     font-family: 'Lato', sans-serif;
 }
 
-    .input:focus, .register-input:focus {
-        box-shadow: 0 0 0 2px rgba(30, 117, 143, 0.3);
-        border-color: #155e74;
-        outline: none;
-    }
+.input:focus, .register-input:focus {
+    box-shadow: 0 0 0 2px rgba(30, 117, 143, 0.3);
+    border-color: #155e74;
+    outline: none;
+}
+
+
+.edit-input {
+    background-color: #fdfdfe;
+    border: 2px solid #1E758F;
+    padding: 12px 15px;
+    margin: 8px 0;
+    width: 100%;
+    border-radius: 8px;
+    color: #1E758F;
+    font-family: 'Lato', sans-serif;
+}
+
 
 /* Лейблы */
 .Labels, .Labels1, .register-label {
@@ -92,9 +105,23 @@
     margin-top: 15px;
 }
 
-.button:hover, .register-button:hover {
+.button:hover, .register-button:hover .button-edit:hover {
     background-color: #155e74;
     cursor: pointer;
+}
+
+
+.button-edit {
+    background-color: #1E758F;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    width: 100%;
+    text-transform: none;
+    transition: background-color 0.3s;
 }
 
 
@@ -124,9 +151,9 @@
     font-size: 15px;
 }
 
-    .login-text:hover, .a:hover {
-        text-decoration: underline;
-    }
+.login-text:hover, .a:hover {
+    text-decoration: underline;
+}
 
 /* Картинки */
 .img-login, .img-signup {
@@ -226,4 +253,39 @@
     .signup_forms {
         top: 0;
     }
+}
+
+/* Обновлённая форма с широкой текстовой областью */
+.wide-form {
+    width: 100%;
+    max-width: 900px; /* ограничение по ширине */
+    margin: 0 auto; /* центрирование формы */
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    /* textarea на 200% от поля ввода, но вписывается в форму */
+.wide-form .register-textarea {
+    width: 420px;
+    max-width: none;
+    min-height: 150px;
+    background-color: #fdfdfe;
+    border: 2px solid #1E758F;
+    padding: 12px 15px;
+    border-radius: 8px;
+    color: #1E758F;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    resize: vertical;
+    display: block;
+    box-sizing: border-box;
+    margin: 0; /* центр уже у формы */
+}
+
+.wide-form .register-textarea:focus {
+    box-shadow: 0 0 0 2px rgba(30, 117, 143, 0.3);
+    border-color: #155e74;
+    outline: none;
 }
